@@ -240,6 +240,9 @@ struct Token *tokenize(char* file) {
                 case '#':
                     comment = 1;
                     break;
+                case '\r':
+                    //Ignore carriage returns because windows. I forgot to add this earlier because I use the superior operating system (for programming at least)
+                    break;
                 default:
                     str[end] = c;
                     end++;
